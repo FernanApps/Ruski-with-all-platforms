@@ -1,0 +1,6 @@
+[workspace]
+members = ["library", "library_c", "library_jni", "library_wasm"]
+
+
+[profile.release]
+panic = 'abort'

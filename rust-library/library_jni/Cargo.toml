@@ -1,0 +1,12 @@
+[package]
+name = "library_jni"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+jni = "0.21.1"
+library = { path = "../library", version = "0.1.0" }
+
+[lib]
+name = "library"
+crate-type = ["cdylib"]

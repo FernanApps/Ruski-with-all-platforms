@@ -1,0 +1,16 @@
+[package]
+name = "library_c"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at
+# https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# Dynamic Library.
+# See: https://doc.rust-lang.org/reference/linkage.html
+# See: https://doc.rust-lang.org/cargo/reference/cargo-targets.html
+[lib]
+crate-type = ["dylib"]
+
+[dependencies]
+library = { path = "../library", version = "0.1.0" }

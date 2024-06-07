@@ -1,0 +1,47 @@
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World - Rust</title>
+    <link rel="preload" href="./index.js" as="script" />
+  </head>
+  <body>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World - Rust</title>
+  <link rel="preload" href="./index.js" as="script" />
+</head>
+<body>
+<input type="text" id="inputText" placeholder="Enter text to encrypt" />
+<button onclick="handleEncrypt()">Encrypt</button>
+<button onclick="handleDecrypt()">Decrypt</button>
+
+<script type="module" src="./index.js"></script>
+<script>
+  function handleEncrypt() {
+    const inputText = document.getElementById('inputText').value;
+    const encryptedText = window.encrypt(inputText);
+    document.getElementById('inputText').value = encryptedText;
+  }
+
+  function handleDecrypt() {
+    const inputText = document.getElementById('inputText').value;
+    const decryptedText = window.decrypt(inputText);
+    document.getElementById('inputText').value = decryptedText;
+  }
+  document.getElementById('inputText').value = hello_world();
+
+
+</script>
+</body>
+</html>
+
+
